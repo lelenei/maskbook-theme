@@ -1,0 +1,13 @@
+@mixin media($res) {
+    @if $res == mobile {
+        @media only screen and (max-width: $mobile_width) {
+            @content;
+        }
+    }
+
+    @if $res == desktop {
+        @media only screen and (max-width: $desktop_width) {
+            @content;
+        }
+    }
+}

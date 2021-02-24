@@ -1,0 +1,21 @@
+
+:root {
+    --width : min(1280px, calc(100% - 128px));
+    @include media(mobile) {
+        --width: calc(100% - 64px);
+    }
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: $specific-font;
+    font-size: 16px;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+    margin: 0;
+}

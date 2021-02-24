@@ -1,0 +1,53 @@
+.site {
+	
+}
+
+.site-logo {
+	img {
+		width: 200px;
+		height: auto;
+	}
+}
+.header-bar {
+	width: var(--width);
+	margin: 0 auto;
+	padding: 2rem;
+	font-size:1.25em;
+	display: flex;
+	font-weight: 700;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+.main-navigation {
+	margin-left: auto;
+
+	ul {
+		margin: 0;
+		list-style: none;
+		li {
+			color: black;
+			display: inline-block;
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+			width: 9em;
+			text-align: center;
+			padding: 1rem 0;
+		}
+	}
+	.sub-menu {
+		display: none;
+	}
+	.menu-install-button {
+		border: 1px solid #33f;
+		border-radius: 0.375rem;
+		a {
+			display: inline-block;
+
+		}
+	}
+}
