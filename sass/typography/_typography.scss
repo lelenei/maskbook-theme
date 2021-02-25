@@ -1,14 +1,18 @@
 
 :root {
-    --width : min(1280px, calc(100% - 128px));
+    --width : min(#{$desktop_width}, calc(100% - #{$size__body_margin}));
     @include media(mobile) {
-        --width: calc(100% - 64px);
+        --width: calc(100% - #{$size__body_margin/2});
     }
 }
 
 * {
     box-sizing: border-box;
   }
+
+html {
+    height: 100%;
+}
 
 body {
     font-family: $specific-font;
@@ -18,4 +22,5 @@ body {
         overflow: hidden;
     }
     margin: 0;
+    height: 100%;
 }

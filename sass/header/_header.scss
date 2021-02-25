@@ -1,5 +1,11 @@
-.site {
-	
+.site-header {
+	width: var(--width);
+	margin: 0 auto;
+	padding: 2rem;
+	font-size:1.25em;
+	display: flex;
+	font-weight: 700;
+	align-items: center;
 }
 
 .site-logo {
@@ -9,13 +15,9 @@
 	}
 }
 .header-bar {
-	width: var(--width);
-	margin: 0 auto;
-	padding: 2rem;
-	font-size:1.25em;
-	display: flex;
-	font-weight: 700;
-	align-items: center;
+	width: 100%;
+	background-color: #fff;
+	z-index: 999;
 	position: sticky;
 	top: 0;
 	left: 0;

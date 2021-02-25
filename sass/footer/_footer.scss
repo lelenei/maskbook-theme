@@ -1,0 +1,112 @@
+.siter-footer {
+    width: 100%;
+    height: $size__footer-height;
+    margin-top: -$size__footer-height;
+    border-top: 1px solid #ddd;
+}
+
+.site-info {
+    width: var(--width);
+    margin: 0 auto;
+    display: flex;
+    padding: 4.625rem 0 3.625rem;
+    .main {
+        flex: 1;
+        padding-right: 2rem;
+        p {
+            font-size: 1.6em;
+            opacity: 0.5;
+            margin: 0;
+        }
+    }
+
+    .footer-menu {
+        width: 12.5rem;
+        opacity: 0.5;
+        margin: 0;
+        padding: 0;
+       
+        li {
+            list-style: none;
+            font-size: 1.6em;
+            margin: 2rem 0;
+            a {
+                text-decoration: none;
+                color: #121212;
+            }
+        }
+        li:first-child {
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+}
+
+.register-form {
+    margin-top: 3.25rem;
+    h3 {
+        margin: 0 0 2rem;
+        font-size: 1.6em;
+        opacity: 0.5;
+    }
+
+    form {
+        display: flex;
+        width: 31.25rem;
+        height: 3.875rem;
+        input {
+            flex: 1;
+            padding: 0.5625rem 1.5rem;
+            border-right: none;
+            border-top-left-radius: 0.1875rem;
+            border-bottom-left-radius: 0.1875rem;
+            outline: none;
+            font-size:1.6em;
+            border: 1px solid #33f;
+        }
+
+        button {
+            width: 64px;
+            background: #33f url(assets/icons/btn-subscribe.svg) no-repeat center;
+            border: 1px solid #33f;
+            border-radius: 0 0.1875rem 0.1875rem 0;
+        }
+       
+    }
+}
+
+.footer-social-menu {
+    display: flex;
+    margin-top: 2rem;
+    a {
+        
+        display: block;
+        width: 2rem;
+        height: 2rem;
+
+        @each $name in "facebook", "twitter", "github", "telegram", "discord" {
+            &[href*="#{$name}"] {
+              background-image: url("assets/icons/media-#{$name}.svg");
+              background-size: 100% 100%;
+            }
+        }
+
+        &:not(first-child) {
+            margin-left: 32px; 
+        }
+    }
+
+}
+
+.site-info2 {
+    max-width: var(--width);
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    p {
+        margin: 0;
+        padding: 3rem;
+        opacity: 0.5;
+        font-size:1.5em;
+    }
+}

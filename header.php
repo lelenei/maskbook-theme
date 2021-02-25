@@ -19,28 +19,30 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class();?>>
-        <?php wp_body_open();?>
-            <header class="header-bar">
-                <div class='site-logo'>
-                   <a>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" width="200px" />
-                   </a>
-                    
-                </div>
-                <?php if (has_nav_menu('header')) : ?>
-                <nav id='site-navigation' class="main-navigation">
-                    <?php
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'header',
-                                'menu_class'     => 'main-menu',
-                                'item_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            )
-                        );
-                    ?>
-                </nav>
-                <?php endif ?>
-                
-            </header>
-            <div id='content' class='site-content'>
+        <div id='content' class='site-content'>
+            <?php wp_body_open();?>
+                <header class="header-bar">
+                    <div class='site-header'>
+                        <div class='site-logo'>
+                        <a>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" width="200px" />
+                        </a>
+                            
+                        </div>
+                        <?php if (has_nav_menu('header')) : ?>
+                        <nav id='site-navigation' class="main-navigation">
+                            <?php
+                                wp_nav_menu(
+                                    array(
+                                        'theme_location' => 'header',
+                                        'menu_class'     => 'main-menu',
+                                        'item_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    )
+                                );
+                            ?>
+                        </nav>
+                        <?php endif ?>
+                    </div> <!-- site-header -->
+                </header>
+           
           
