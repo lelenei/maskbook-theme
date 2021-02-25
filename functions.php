@@ -81,6 +81,9 @@ function wpmaker_menu_classes($classes, $item, $args) {
 add_filter('nav_menu_css_class','wpmaker_menu_classes',1,3);
 
 
+require get_template_directory() . '/inc/template-tags.php';
+
+
 
 
 ?>

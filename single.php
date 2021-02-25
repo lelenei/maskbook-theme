@@ -13,13 +13,13 @@ get_header();
 ?>
 
     <main id="main" class="site-main">
-            <?php
-            // Start the Loop.
-            while ( have_posts() ) :
-                    the_post();
-                    get_template_part( 'template/content/content', 'single' );
-            endwhile; // End the loop.
-            ?>
+        <?php
+                // Start the Loop.
+                while ( have_posts() ) :
+                        the_post();
+                        get_template_part( 'template/content/content', 'single' );
+                endwhile; // End the loop.
+        ?>
 
     </main><!-- #main -->
 

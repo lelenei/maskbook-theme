@@ -5,4 +5,12 @@
 .site-main {
     padding-bottom: $size__footer-height;
     padding: 0 3rem;
+
+    .entry-header {
+        text-align: center;
+    }
+    .entry-content {
+        padding: 0 3rem;
+        padding-bottom: $size__footer-height;
+    }
 }

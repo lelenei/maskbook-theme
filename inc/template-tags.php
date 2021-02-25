@@ -6,7 +6,7 @@ if (!function_exists("maskbook_news_posted_by")):
         printf(
             /* translators: 1: SVG icon. 2: Post author, only visible to screen readers. 3: Author link. */
             '<span class="byline"><span class="screen-reader-text">%1$s</span><span class="author vcard"><a class="url fn n" href="%2$s">%3$s</a></span></span>',
-            __( 'Posted by', 'twentynineteen' ),
+            'Posted by' ,
             esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
             esc_html( get_the_author() )
         );

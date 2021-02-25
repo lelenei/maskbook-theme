@@ -15,14 +15,13 @@
     <header class="entry-header">
         <?php get_template_part( 'template/header/entry', 'header' ); ?>
     </header>
-
     <div class="entry-content">
         <?php
         the_content(
             sprintf(
                 wp_kses(
                     /* translators: %s: Post title. Only visible to screen readers. */
-                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
+                    'Continue reading<span class="screen-reader-text"> "%s"</span>',
                     array(
                         'span' => array(
                                 'class' => array(),
@@ -35,5 +34,6 @@
 
         ?>
     </div><!-- .entry-content -->
+   
 
 </article><!-- #post-<?php the_ID(); ?> -->
