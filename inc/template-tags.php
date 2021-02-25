@@ -44,10 +44,11 @@ function maskbook_news_add_dropdown_icons( $item_output, $item, $depth, $args ) 
         return $item_output;
     }
     if (in_array('menu-item-has-children', $item->classes, true)) {
-        $item_output .= '<button class="submenu-expand" tabindex="-1"></button>';
+        $item_output .= '<button id="submenu-expand" class="submenu-expand" tabindex="-1"></button>';
     }
 
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'maskbook_news_add_dropdown_icons', 10, 4 );
+
 ?>

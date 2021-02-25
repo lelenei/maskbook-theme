@@ -9,6 +9,7 @@
 	@include media(mobile) {
 		padding: 2rem 0;
 	}
+	position:relative;
 }
 
 .site-logo {
@@ -35,7 +36,11 @@
 .main-navigation {
 	margin-left: auto;
 
-	ul {
+	.main-menu {
+		display: block;
+		@include media(mobile) {
+			display: none
+		}
 		margin: 0;
 		list-style: none;
 		li {
@@ -49,11 +54,37 @@
 			text-align: center;
 			padding: 1rem 0;
 			position: relative;
+
+		}
+		
+
+		.sub-menu {
+			display: none;
+			background-color: $color__logo_blue;
+			position: absolute;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			padding: 0;
+			z-index:999;
+			li {
+				a {
+					color: #fff;
+				}
+			
+			}
+			li:hover {
+				background-color:blue;
+			}
+			
+		}
+		.sub-menu .open {
+			display: block;
+		
 		}
 	}
-	.sub-menu {
-		display: none;
-	}
+	
+	
+
 	.menu-install-button {
 		border: 1px solid $color__logo_blue;
 		border-radius: 0.375rem;
@@ -62,12 +93,7 @@
 
 		}
 	}
-	.main-menu {
-		display: block;
-		@include media(mobile) {
-			display: none
-		}
-	}
+
 
 	.main-menu-more {
 		display: none;
@@ -84,6 +110,8 @@
 	}
 	
 }
+
+
 
 .submenu-expand {
 	background: url(assets/icons/details-open.svg) no-repeat 100%;
