@@ -41,7 +41,29 @@
                                     )
                                 );
                             ?>
-                            <button class='main-menu-more'></button>
+                            <button class='main-menu-more' id="main-menu-more"></button>
+                            <div id='site-mobiile-navigation-bg'>
+                                <nav id='site-mobile-navigation'>
+                                <?php
+                                    wp_nav_menu(
+                                        array(
+                                            'theme_location' => 'header',
+                                            'container'      => false,
+                                            'menu_class'     => 'mobile-main-menu',
+                                            'item_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                        )
+                                    );
+                                ?>
+                                    <nav class='mobile-social-menu'>
+                                        <a href="https://www.facebook.com/groups/324857694838456" title="Facebook" target="_blank"></a>
+                                        <a href="https://twitter.com/realmaskbook" title="Twitter" target="_blank"></a>
+                                        <a href="https://github.com/DimensionDev" title="GitHub" target="_blank"></a>
+                                        <a href="https://t.me/maskbook_group#telegram" title="Telegram" target="_blank"></a>
+                                        <a href="https://discord.gg/4SVXvj7" title="Discord" target="_blank"></a>
+                                    </nav>
+                                </nav>
+                                
+                            </div>
                         </nav>
                         <?php endif ?>
                     </div> <!-- site-header -->

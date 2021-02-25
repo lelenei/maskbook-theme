@@ -33,6 +33,18 @@
 	
 }
 
+.submenu-expand {
+	background: url(assets/icons/details-open.svg) no-repeat 100%;
+	height: 20px;
+	width: 25px;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+
 .main-navigation {
 	margin-left: auto;
 
@@ -107,19 +119,118 @@
 			display: block;
 
 		}
+		&.close {
+			background-image: url(assets/icons/navbar-toggle-close.svg);
+		}
 	}
+
 	
+}
+
+#site-mobiile-navigation-bg {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	height: 100%;
+	overflow: hidden;
+	animation: fade_in 0.3s forwards;	
 }
 
 
 
-.submenu-expand {
-	background: url(assets/icons/details-open.svg) no-repeat 100%;
-	height: 20px;
-	width: 25px;
-	border: none;
-	outline: none;
-	position: absolute;
-	top: 20px;
-	right: 10px;
+#site-mobile-navigation {
+	display: flex;
+	width: 350px;
+	height: 100%;
+	background-color: $color__logo_blue;
+	@include media(mobile) {
+		width: calc(100% - 20px);
+		height: 100%;
+		padding-top: 2.625rem;
+	}
+	transform: translate(-100%);
+	animation: slide_in_left 0.3s forwards;
+	justify-content: center;
+
+	ul {
+		margin: 0;
+		
+		 li {
+			 margin: 1.5rem auto;
+			 list-style: none;
+			 a {
+				color: white;
+				text-decoration: none;
+				outline: none;
+				font-size: 1.2em;
+				font-weight: 400;
+			}
+		}
+	}
+	> .mobile-main-menu {
+		padding-left: 0px;
+		>li {
+			>.submenu-expand {
+				display: none;
+			}
+			
+		}
+		>.menu-install-button {
+			
+		}
+		
+		
+	}
+
+	.mobile-social-menu {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		width: 100%;
+		padding: 32px;
+		a {
+        
+			flex: 1;
+			display: block;
+
+			width: 32px;
+			height: 32px;
+	
+			@each $name in "facebook", "twitter", "github", "telegram", "discord" {
+				&[href*="#{$name}"] {
+				  background-image: url("assets/icons/media-#{$name}.svg");
+				  background-size: 100% 100%;
+				}
+	
+			}
+	
+		}
+	}
+
+}
+
+
+
+
+
+@keyframes slide_in_left {
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fade_in {
+	from {
+		opacity: 0;
+	}
+	to {
+			opacity: 1	;
+	}
 }
