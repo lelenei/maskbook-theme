@@ -48,6 +48,7 @@
 			width: 9em;
 			text-align: center;
 			padding: 1rem 0;
+			position: relative;
 		}
 	}
 	.sub-menu {
@@ -82,4 +83,15 @@
 		}
 	}
 	
+}
+
+.submenu-expand {
+	background: url(assets/icons/details-open.svg) no-repeat 100%;
+	height: 20px;
+	width: 25px;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 20px;
+	right: 10px;
 }

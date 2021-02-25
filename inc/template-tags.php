@@ -39,4 +39,15 @@ if (!function_exists("maskbook_news_posted_on")):
     }
 endif;
 
+function maskbook_news_add_dropdown_icons( $item_output, $item, $depth, $args ) {
+    if (!isset($args->theme_location) || 'header' !== $args->theme_location) {
+        return $item_output;
+    }
+    if (in_array('menu-item-has-children', $item->classes, true)) {
+        $item_output .= '<button class="submenu-expand" tabindex="-1"></button>';
+    }
+
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'maskbook_news_add_dropdown_icons', 10, 4 );
 ?>
