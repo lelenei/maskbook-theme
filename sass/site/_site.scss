@@ -5,7 +5,12 @@
 .site-main {
     padding-bottom: $size__footer-height;
     padding: 0 3rem;
+    width: var(--width);
+    margin: 0 auto;
 
+    @include media(mobile) {
+        margin: 0;
+    }
     .entry-header {
         text-align: center;
     }
