@@ -17,10 +17,10 @@ html {
 body {
     font-family: $specific-font;
     font-size: 16px;
-
     &.no-scroll {
         overflow: hidden;
     }
     margin: 0;
     height: 100%;
+    width: 100%;
 }

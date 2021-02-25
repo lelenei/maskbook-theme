@@ -6,21 +6,30 @@
 	display: flex;
 	font-weight: 700;
 	align-items: center;
+	@include media(mobile) {
+		padding: 2rem 0;
+	}
 }
 
 .site-logo {
 	img {
 		width: 200px;
 		height: auto;
+		@include media(mobile) {
+			width: 140px;
+			height: auto;
+		}
 	}
+
 }
 .header-bar {
 	width: 100%;
-	background-color: #fff;
+	background-color: $color__header_background;
 	z-index: 999;
 	position: sticky;
 	top: 0;
 	left: 0;
+	
 }
 
 .main-navigation {
@@ -45,11 +54,32 @@
 		display: none;
 	}
 	.menu-install-button {
-		border: 1px solid #33f;
+		border: 1px solid $color__logo_blue;
 		border-radius: 0.375rem;
 		a {
 			display: inline-block;
 
 		}
 	}
+	.main-menu {
+		display: block;
+		@include media(mobile) {
+			display: none
+		}
+	}
+
+	.main-menu-more {
+		display: none;
+		background: url(assets/icons/navbar-toggle-open.svg) no-repeat 100%;
+		width: 2rem;
+		height: 2rem;
+		background-size: 1.5rem;
+		border: none;
+		outline: none;
+		@include media(mobile) {
+			display: block;
+
+		}
+	}
+	
 }
