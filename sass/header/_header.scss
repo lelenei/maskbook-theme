@@ -150,7 +150,7 @@
 	height: 100%;
 	background-color: $color__logo_blue;
 	@include media(mobile) {
-		width: calc(100% - 20px);
+		width: calc(100% - 60px);
 		height: 100%;
 		padding-top: 2.625rem;
 	}
