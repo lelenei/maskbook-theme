@@ -9,7 +9,7 @@
     width: var(--width);
     margin: 0 auto;
     display: flex;
-    @include media(mobile) {
+    @include media(tablet) {
         display: block;
     }
     padding: 4.625rem 0 3.625rem;
@@ -20,11 +20,11 @@
             font-size: 1.6em;
             opacity: 0.5;
             margin: 0;
-            @include media(mobile) {
+            @include media(tablet) {
                 font-size:1.1em;
             }
         }
-        @include media(mobile) {
+        @include media(tablet) {
             padding: 0;
         }
     }
@@ -34,18 +34,26 @@
         margin: 0;
         padding: 0;
 
+        @include media(tablet) {
+            width: 100%;
+            justify-content: center;
+            margin-top:64px;
+            display: flex;
+        }
         @include media(mobile) {
             width: 100%;
             text-align: center;
             margin-top:64px;
+            display: block;
         }
+       
        
         li {
             list-style: none;
             font-size: 1.6em;
             margin: 2rem 0;
             opacity: .5;
-            @include media(mobile) {
+            @include media(tablet) {
                 font-size: 1em;
                 display: inline-block;
                 margin: 8px 0 0;
@@ -65,13 +73,13 @@
         li:first-child {
             margin: 0;
             font-weight: bold;
-            @include media(mobile) {
+            @include media(tablet) {
                 display: none;
             }
         }
         li:nth-child(4) {
             display:block;
-            @include media(mobile) {
+            @include media(tablet) {
                 display: none;
             }
         }
@@ -84,7 +92,7 @@
         margin: 0 0 2rem;
         font-size: 1.6em;
         opacity: 0.5;
-        @include media(mobile) {
+        @include media(tablet) {
             font-size:1.2em;
         }
     }
@@ -157,7 +165,7 @@
               background-image: url("assets/icons/media-#{$name}.svg");
               background-size: 100% 100%;
             }
-            @include media(mobile) {
+            @include media(tablet) {
                 width: 24px;
                 height: 24px;
             }
@@ -182,7 +190,7 @@
         padding: 3rem;
         opacity: 0.5;
         font-size:1.5em;
-        @include media(mobile) {
+        @include media(tablet) {
             font-size: 0.9em;
             padding: 32px 0;
         }
