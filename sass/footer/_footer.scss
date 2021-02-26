@@ -31,7 +31,6 @@
 
     .footer-menu {
         width: 12.5rem;
-        opacity: 0.7;
         margin: 0;
         padding: 0;
 
@@ -45,6 +44,7 @@
             list-style: none;
             font-size: 1.6em;
             margin: 2rem 0;
+            opacity: .5;
             @include media(mobile) {
                 font-size: 1em;
                 display: inline-block;
@@ -56,6 +56,7 @@
             }
             a {
                 text-decoration: none;
+                background-color: transparent;
                 color: #121212;
             }
 
@@ -106,7 +107,7 @@
             border-bottom-left-radius: 2px;
             outline: none;
             font-size:1.6em;
-            border: 1px solid $color__logo_blue;
+            border: 1px solid $color__form_border;
             @include media(mobile) {
                 width: 100%;
                 display: block;
@@ -121,7 +122,7 @@
             width: 64px;
             display:inline-block;
             background: $color__background_submit url(assets/icons/btn-subscribe.svg) no-repeat center;
-            border: 1px solid $color__logo_blue;
+            border: 1px solid $color__background_submit ;
             border-radius: 0 0.1875rem 0.1875rem 0;
             color: transparent;
             background-size: 100% 100%;
