@@ -110,12 +110,12 @@
         input {
             flex: 1;
             padding: 0.5625rem 1.5rem;
-            border-right: none;
             border-top-left-radius: 2px;
             border-bottom-left-radius: 2px;
             outline: none;
             font-size:1.6em;
             border: 1px solid $color__form_border;
+            border-right: none;
             @include media(mobile) {
                 width: 100%;
                 display: block;
@@ -123,6 +123,7 @@
                 padding: 0.875rem;
                 border-radius: 0.375rem;
                 margin-bottom: 1rem;
+                border-right: 1px solid $color__form_border;
             }
         }   
 
