@@ -9,7 +9,8 @@
     margin: 0 auto;
 
     @include media(mobile) {
-        margin: 0;
+        margin: 0 auto;
+        padding: 0;
     }
     .entry-header {
         text-align: center;
