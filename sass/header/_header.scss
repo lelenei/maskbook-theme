@@ -1,24 +1,25 @@
 .site-header {
 	width: var(--width);
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 2rem 0;
 	font-size:1.25em;
 	display: flex;
 	font-weight: 700;
 	align-items: center;
-	@include media(tablet) {
-		padding: 2rem 0;
+	line-height: 0;
+	@include media(desktop) {
+		padding: 2rem;
+	        line-height: 1.15;
 	}
 	position:relative;
 }
 
 .site-logo {
-	line-height: 0;
 	img {
-		width: 200px;
+		width: 140px;
 		height: auto;
-		@include media(mobile) {
-			width: 140px;
+		@include media(desktop) {
+			width: 200px;
 			height: auto;
 		}
 	}
@@ -120,7 +121,7 @@
 
 	.main-menu-more {
 		display: block;
-		background: url(assets/icons/navbar-toggle-open.svg) no-repeat 100%;
+		background: url(assets/icons/navbar-toggle-open.svg) no-repeat 50%;
 		width: 2rem;
 		height: 2rem;
 		background-size: 1.5rem;

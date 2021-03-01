@@ -21,7 +21,8 @@
                         <div class='register-form'>
                             <h3>Get latest news and updates</h3>
                             <form name="subscription" method="post" target="_blank" novalidate="" action="https://dimension.us20.list-manage.com/subscribe/post?u=bd44f8df98ab3d8daf8bbe020&amp;id=d23c8870f6">          
-                                <input type="email" name="EMAIL" placeholder="Subscribe"><button type="submit" style="cursor: pointer;"></button>
+                                <input type="email" name="EMAIL" placeholder="Subscribe">
+				<button type="submit" style="cursor: pointer;"></button>
                             </form>
                         </div>
                         <nav class='footer-social-menu'>

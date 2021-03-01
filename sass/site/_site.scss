@@ -3,7 +3,7 @@
 }
 
 .site-main {
-    padding-bottom: $size__footer-height;
+    padding-bottom: $size__footer-height+50px;
     padding: 0 3rem;
     width: var(--width);
     margin: 0 auto;
@@ -16,10 +16,10 @@
         text-align: center;
     }
     .entry-content {
-        padding: 0 3rem  $size__footer-height 3rem;
+        padding: 0 3rem  $size__footer-height+50px 3rem;
         
         @include media(mobile) {
-            padding: 0 0  $size__footer-height 0;
+            padding: 0 0  $size__footer-height+50px 0;
         }
     }
 }

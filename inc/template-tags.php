@@ -1,5 +1,12 @@
-
 <?php
+/**
+ * Custom template tags for this theme
+ *
+ * @package WordPress
+ * @subpackage Maskbook News
+ * @since Maskbook News 1.0
+ */
+
 
 if (!function_exists("maskbook_news_posted_by")):
     function maskbook_news_posted_by() {
