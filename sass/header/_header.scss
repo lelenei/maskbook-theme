@@ -191,7 +191,9 @@
 	}
 	> .mobile-main-menu {
 		padding-left: 0px;
+		padding-top: 42px;
 		>li {
+			margin: 24px auto;
 			>.submenu-expand {
 				display: none;
 			}
