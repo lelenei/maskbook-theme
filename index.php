@@ -9,9 +9,9 @@
  * @since Maskbook News 1.0
  * Template Name: archive title list
  */
-$order_by = 'comment_count';
+$order_by = 'post_modified_gmt';
 $order = 'DESC';
-$posts_per_page = 10;
+$posts_per_page = 1;
 $cat = '';
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -32,26 +32,28 @@ $total_posts = $post_list->found_posts;
     <main id="main" class="site-main">
 
         <article <?php post_class(); ?>>
-            <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title display-2">', '</h1>' ); ?>
-            </header>
-
             <?php if ( $post_list->have_posts() ) : ?>
             <div class="entry-content">
-                <ul class="article-list">
-                    <?php while ( $post_list->have_posts() ) : $post_list->the_post(); ?>
-                    <li class="article-list-item" >
-
+               
+                <?php while ( $post_list->have_posts() ) : $post_list->the_post(); ?>
+                    <div class='post-thumbnail-list'>
                         <span class="post-title">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank"><?php the_title(); ?></a>
+                            <?php the_title(); ?>
+                           
                         </span>
 
-                        <span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
-
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-
+                        <?php  maskbook_news_post_thumbnail() ?>
+                    
+                        <?php the_excerpt(); ?>
+                    
+                        <div class='operator'>
+                            <span class="post-date"><?php echo esc_html( get_the_date() ); ?></span>
+                            <a target="_parent" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" target="_blank">READ MORE</a>
+                        </div>
+                    </div>
+            
+                <?php endwhile; ?>
+               
             <!-- wp_pagenavi -->
             <?php if ( function_exists('wp_pagenavi') ) wp_pagenavi( array('query' => $post_list) );  ?>
             </div><!-- .entry-content -->

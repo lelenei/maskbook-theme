@@ -39,6 +39,34 @@ if (!function_exists("maskbook_news_posted_on")):
     }
 endif;
 
+
+if ( ! function_exists( 'maskbook_news_post_thumbnail' ) ) :
+   
+    function maskbook_news_post_thumbnail() {
+
+            if ( is_singular() ) :
+                    ?>
+
+                    <figure class="post-thumbnail">
+                            <?php the_post_thumbnail('post-thumbnail'); ?>
+                    </figure><!-- .post-thumbnail -->
+
+                    <?php
+            else :
+                    ?>
+
+            <figure class="post-thumbnail">
+                    <a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+                            <?php the_post_thumbnail( 'post-thumbnail' ); ?>
+                    </a>
+            </figure>
+
+                    <?php
+            endif; // End is_singular().
+    }
+endif;
+
+
 function maskbook_news_add_dropdown_icons( $item_output, $item, $depth, $args ) {
     if (!isset($args->theme_location) || 'header' !== $args->theme_location) {
         return $item_output;

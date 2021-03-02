@@ -49,6 +49,9 @@ endif;
 
 add_action('after_setup_theme', 'maskbook_news_setup');
 
+if (function_exists('add_theme_support')):
+    add_theme_support('post-thumbnails');
+endif;
 
 /**
  * Enqueue scripts and styles.
@@ -74,6 +77,9 @@ function wpmaker_menu_classes($classes, $item, $args) {
             if ($item->title === 'Install') {
                     $classes[] = 'menu-install-button';
             }
+            if ($item->title === 'News') {
+                $classes[] = 'center';
+            }
     }
     return $classes;
 }
@@ -82,7 +88,7 @@ add_filter('nav_menu_css_class','wpmaker_menu_classes',1,3);
 
 require get_template_directory() . '/inc/template-tags.php';
 
-
+require get_template_directory() .'/options.php';
 
 
 ?>
