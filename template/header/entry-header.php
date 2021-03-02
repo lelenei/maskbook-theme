@@ -12,7 +12,6 @@
 
 <?php if ( ! is_page() ) : ?>
     <div class="entry-meta">
-        <?php maskbook_news_posted_by(); ?>
         <?php maskbook_news_posted_on(); ?>
        
     </div><!-- .entry-meta -->

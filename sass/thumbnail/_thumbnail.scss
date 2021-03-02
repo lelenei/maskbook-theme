@@ -4,12 +4,15 @@
     .post-thumbnail {
         margin: 0;
     }
-    >.post-title {
-        font-size:40px;
-        @include media(tablet) {
-            font-size: 24px;
+    >.entry-header {
+        >a {
+
+            >h1 {
+                line-height: 1.15;
+            }
         }
     }
+    
 
     >.operator {
         display: flex;

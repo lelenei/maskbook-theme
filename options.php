@@ -7,45 +7,39 @@
 ** @since Maskbook New 1.0 
 */
 
+if (is_admin()):
 
 
-function register_theme_settings() {
-    register_setting("","page_size");
-}
-add_action('admin_init', 'register_theme_settings');
-
-function maskbook_news_options_admin_menu()
-{
-    add_theme_page("Maskbook News Setup", "Theme Options", "edit_themes", basename(__FILE__), "maskbook_news_options_page");
-}
-
-add_action("admin_menu", "maskbook_news_options_admin_menu");
-
-function maskbook_news_options_page() {
-    if ( $_POST['“update_options”'] == 'true' ) { 
-        maskbook_news_options_update(); 
-        echo "true";
-    }
-    $defaults = '
-    <div>
-       
-        <h2>Archive List Setup</h2>
-        <form method="POST" action="">
-            <input type="hidden" name="update_options" value="true" />
-            <h4>Page Size</h4>
-            <input type="text" name="page_size" id="page_size" size="32" value="'.get_option("page_size"). '"/>
-            <input type="submit" name="bcn_admin_options" value="更新数据"/>
+    function maskbook_news_option_page() {
+        if( !empty($_POST) && check_admin_referer('maskbook_news_admin_options-update') ) {
+            update_option('maskbook_post_per_page', $_POST['posts_per_page']);
+            ?>
+            <div id="message" class="updated">
+                <p><strong>Posts per page was saved</strong></p>
+            </div>
+            <?php
+        }
+?>
+        <div class="wrap">
+        <h2>Archive List Options </h2>
+        <p>Welcome to Maskbooks News Theme, here you can edit posts per page to archive list page. </p>
+        <form action="" method="post" id="maskbook-news-posts-per-page-options-form">
+            <h3><label for="posts_per_page"></label>Posts per page:
+            <input type="number" name="posts_per_page" id="posts_per_page"
+            value="<?php echo get_option('maskbook_post_per_page') ?>" size="40" /></h3>
+            <p><input type="submit" name="submit" value="Save" /></p>
+            <?php wp_nonce_field('maskbook_news_admin_options-update'); ?>
         </form>
     </div>
-    ';
-    
-    echo $defaults;
-}
+<?php
+    }
 
-function maskbook_news_options_update() {
-    update_option('page_size', $_POST['page_size']);
-    echo $_POST('page_size');
-}
+    function maskbook_news_options_page_menu() {
+        add_theme_page('Settings', 'Theme settings', 'manage_options', '','maskbook_news_option_page' );
+    }
 
+    add_action( 'admin_menu', 'maskbook_news_options_page_menu' );
+
+endif;
 
 ?>
