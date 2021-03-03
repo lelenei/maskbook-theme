@@ -7,7 +7,6 @@
  * @package WordPress
  * @subpackage Maskbook_WP_News
  * @since Maskbook News 1.0
- * Template Name: archive title list
  */
 
 

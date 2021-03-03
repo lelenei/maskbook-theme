@@ -2,6 +2,9 @@
     window.onload = () => {
         let menuOpen = false;
         const menu = document.getElementById('submenu-expand')
+        const menu_bar = document.getElementsByClassName('menu-item-has-children')[0];
+        console.log(menu_bar);
+        console.log(menu);
         const sub_menu = document.getElementsByClassName('sub-menu')
 
         function sub_menu_toggle(e) {
@@ -14,7 +17,7 @@
             }
         }
         menu.addEventListener('click', sub_menu_toggle, false)
-
+        menu_bar.addEventListener('click', sub_menu_toggle, false);
        
         function stopBubble(e){   
             if(e && e.stopPropagation){

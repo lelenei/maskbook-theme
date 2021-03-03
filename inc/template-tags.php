@@ -79,4 +79,10 @@ function maskbook_news_add_dropdown_icons( $item_output, $item, $depth, $args ) 
 }
 add_filter( 'walker_nav_menu_start_el', 'maskbook_news_add_dropdown_icons', 10, 4 );
 
+/*
+function add_my_media_button() {
+    echo '<a href="#" id="insert-my-media" class="button">Add my media</a>';
+}
+add_action('media_buttons', 'add_my_media_button');
+*/
 ?>

@@ -24,7 +24,7 @@
                 <header class="header-bar">
                     <div class='site-header'>
                         <div class='site-logo'>
-                        <a>
+                        <a target="_parent" href='/'>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/logo.svg" width="200px" />
                         </a>
                             
