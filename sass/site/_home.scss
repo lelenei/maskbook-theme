@@ -59,55 +59,7 @@
     max-width: var(--width);
     margin: 0 auto;
   
-    .steps {
-      width: 100%;
-      margin-top: 92px;
-      display: flex;
-      justify-content: space-between;
-      > .step {
-        position: relative;
-        width: 352px;
   
-        > img {
-          margin: 24px 0 16px 0;
-        }
-  
-        > .title {
-          color: #000;
-          font-weight: bold;
-          font-size: 2.7em;
-          margin: 0;
-  
-          a {
-            color: #1c68f3;
-            font-weight: 300;
-          }
-        }
-        > .tip {
-            margin: 0;
-            text-align: left;
-            font-size: 1.7em;
-          }
-        }
-    
-        @include media(mobile) {
-          display: block;
-    
-          > .step {
-            width: 100%;
-    
-            &:not(:last-child) {
-              margin-bottom: 72px;
-            }
-    
-            > .tip {
-              font-size: 1.35em;
-              line-height: 1.3;
-            }
-          }
-        }
-    }
-
     .page-section-title {
         text-align: center;
         font-size: 9em;
@@ -151,10 +103,7 @@
         }
       }
     
-      .page-section-body {
-        display: flex;
-        justify-content: space-between;
-      }
+  
     
       .illust {
         display: block;
@@ -163,6 +112,64 @@
       }
               
 }
+
+.page-section-body {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--width);
+    margin: 0 auto;
+    
+    .steps {
+        width: 100%;
+        margin-top: 92px;
+        display: flex;
+        justify-content: space-between;
+        > .step {
+          position: relative;
+          width: 352px;
+    
+          > img {
+            margin: 24px 0 16px 0;
+          }
+    
+          > .title {
+            color: #000;
+            font-weight: bold;
+            font-size: 2.7em;
+            margin: 0;
+    
+            a {
+              color: #1c68f3;
+              font-weight: 300;
+            }
+          }
+          > .tip {
+              margin: 0;
+              text-align: left;
+              font-size: 1.7em;
+            }
+          }
+      
+          @include media(mobile) {
+            display: block;
+      
+            > .step {
+              width: 100%;
+      
+              &:not(:last-child) {
+                margin-bottom: 72px;
+              }
+      
+              > .tip {
+                font-size: 1.35em;
+                line-height: 1.3;
+              }
+            }
+          }
+      }
+  
+  }
+
 
 .ability-section {
     margin-top: 128px;

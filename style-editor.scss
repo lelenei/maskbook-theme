@@ -1,0 +1,69 @@
+
+/*
+** Theme Name: Maskbook News 
+** Author:  lelenei
+** Description: Maksbook News
+** Version:1.0
+*/
+
+@import "sass/variables-site/variables-site";
+@import "sass/mixin/utils";
+@import "sass/site/home";
+@import "sass/typography/typography";
+.wp-block {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+html {
+    line-height: 1.15;
+}
+p {
+    line-height: 1.15;
+}
+.editor-styles-wrapper {
+    font-family: $specific-font !important;
+}
+.block-editor-block-list__block .wp-block{
+    padding-bottom: $size__footer-height;
+    font-family: $specific-font !important;
+    width:100%;
+    margin: 0;
+   // margin: 0 auto;
+}
+
+.page-core-feature {
+    line-height: 1.15;
+    font-weight: bold;
+    .page-section-header {
+        .page-section-title {
+            text-align: center;
+            font-size: 9em;
+            margin: 32px 0;
+            word-break: break-word;
+
+            >.second-title {
+                margin: -0.1em 0 -0.3em 0;
+                font-size: 140%;
+            }
+
+            >.third-title {
+                color: transparent;
+                -webkit-text-stroke: 2px black;
+            }
+
+            >.last-title {
+                font-size: 80%;
+            }
+
+            @include media(mobile) {
+                font-size: 4em;
+            }
+        }
+    }
+    .page-section-description {
+        line-height: 1.15;
+        font-weight: 400;
+    }
+}

@@ -17,3 +17,7 @@
         }
     }
 }
+
+@mixin font-family($font-family) {
+    font-family: $font-family;
+}
